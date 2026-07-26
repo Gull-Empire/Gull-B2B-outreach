@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Gull Of Group Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://abdullah-gull.github.io/services/facon-Gull-of-Group.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://abdullah-gull.github.io/services/facon-Gull-of-Group.png">
+<link rel="apple-touch-icon" href="https://abdullah-gull.github.io/services/facon-Gull-of-Group.png">
+  <title>Gull Of Group — AI-Powered B2B Outbound & Lead Generation Engine</title>
+
+  <!-- ===== SEO META TAGS ===== -->
+  <meta name="description" content="Gull Of Group combines human intelligence with proprietary AI to deliver high-quality B2B leads, booked meetings, and pipeline growth — appointment setting, cold calling, cold emailing, and LinkedIn outreach for ambitious companies.">
+  <meta name="keywords" content="B2B appointment setting, outbound lead generation, cold emailing, AI sales platform, inbound lead generation, sales outsourcing, LinkedIn lead generation, cold calling, B2B sales training">
+  <meta name="author" content="Gull Of Group LLC">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gull-of-group.github.io/index.html">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gull-of-group.github.io/index.html">
+  <meta property="og:title" content="Gull Of Group — AI-Powered B2B Outbound & Lead Generation Engine">
+  <meta property="og:description" content="High-quality B2B leads, booked meetings, and pipeline growth powered by human intelligence + proprietary AI.">
+  <meta property="og:image" content="https://abdullah-gull.github.io/services/ChatGPT_Image_Jul_26__2026__01_23_06_AM-removebg-preview.png">
+  <meta property="og:site_name" content="Gull Of Group">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gull Of Group — AI-Powered B2B Outbound & Lead Generation Engine">
+  <meta name="twitter:description" content="High-quality B2B leads, booked meetings, and pipeline growth powered by human intelligence + proprietary AI.">
+  <meta name="twitter:image" content="https://abdullah-gull.github.io/services/ChatGPT_Image_Jul_26__2026__01_23_06_AM-removebg-preview.png">
+
+  <!-- Organization Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gull Of Group",
+    "legalName": "Gull Of Group LLC",
+    "url": "https://gull-of-group.github.io/index.html",
+    "logo": "https://abdullah-gull.github.io/services/ChatGPT_Image_Jul_26__2026__01_23_06_AM-removebg-preview.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "280 W 198th St",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10030",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/gull-of-group",
+      "https://github.com/gull-of-group",
+      "https://x.com/gullofgroup"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#5BE222',
+              dark: '#48b81a',
+              glow: 'rgba(91, 226, 34, 0.4)',
+            },
+            darkbg: '#070A0D',
+            cardbg: '#0F141A'
+          },
+          animation: {
+            'spin-slow': 'spin 25s linear infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'float': 'float 4s ease-in-out infinite',
+          },
+          keyframes: {
+            pulseGlow: {
+              '0%, 100%': { opacity: 0.2, transform: 'scale(1)' },
+              '50%': { opacity: 0.4, transform: 'scale(1.05)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Neon Effects & Glassmorphism */
+    .glow-effect {
+      box-shadow: 0 0 50px -10px rgba(91, 226, 34, 0.25);
+    }
+    .text-glow {
+      text-shadow: 0 0 15px rgba(91, 226, 34, 0.5);
+    }
+    .glass-card {
+      background: rgba(15, 20, 26, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-dropdown {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    /* ===== LOGO EMBLEM FIX =====
+       The logo PNG has its own black square/rect background baked into the
+       file. Putting it directly inside the circular emblem shows that
+       square edge. Fix: clip the wrapper to a perfect circle (overflow
+       hidden) and blend the image with mix-blend-mode: screen so pure
+       black pixels become invisible and only the white bird mark shows. */
+    .logo-emblem {
+      overflow: hidden;
+      isolation: isolate; /* keeps blend mode contained to this element */
+    }
+    .logo-emblem img {
+      mix-blend-mode: screen;
+      -webkit-mix-blend-mode: screen;
+    }
+  </style>
+</head>
+<body class="bg-darkbg text-gray-100 font-sans antialiased selection:bg-brand selection:text-black min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- BACKGROUND GLOW EFFECTS -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-brand/10 blur-[150px] pointer-events-none -z-10 animate-pulse-glow"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 glass-card border-b border-gray-800/60">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+          <a href="https://gull-of-group.github.io/index.html" class="inline-flex items-center shrink-0 group py-1">
+      <img src="https://abdullah-gull.github.io/services/ChatGPT_Image_Jul_26__2026__01_23_06_AM-removebg-preview.png" alt="Gull Of Group"
+           class="h-9 sm:h-11 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(139,63,224,0.35)] group-hover:drop-shadow-[0_0_18px_rgba(219,165,78,0.5)] group-hover:scale-[1.03] transition-all duration-300 ease-out">
+    </a>
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+        
+        <!-- MEGA DROPDOWN TRIGGER (SOLUTIONS) -->
+        <div class="relative group" id="solutionsMenuWrapper">
+          <button id="solutionsBtn" class="flex items-center gap-1.5 text-gray-200 hover:text-brand py-2 transition-colors focus:outline-none">
+            Solutions
+            <i data-lucide="chevron-down" id="solutionsChevron" class="w-4 h-4 transition-transform duration-200"></i>
+          </button>
+
+          <!-- MEGA DROPDOWN MENU PANEL -->
+          <div id="megaDropdown" class="absolute left-0 top-full pt-4 w-[780px] hidden opacity-0 transition-all duration-200 -translate-y-2 group-hover:block group-hover:opacity-100 group-hover:translate-y-0">
+            <div class="glass-dropdown rounded-2xl p-6 text-gray-900 grid grid-cols-12 gap-6 border border-gray-200">
+              
+              <!-- Left 2 Columns: Core Services -->
+              <div class="col-span-8 grid grid-cols-2 gap-x-6 gap-y-3 border-r border-gray-300/70 pr-6">
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">B2B Appointment setting</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">Outbound Lead generation</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">Cold Emailing</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">AI Sales Platform</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">Inbound Lead Generation</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">Sales Outsourcing Service</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">LinkedIn Lead Generation</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">Cold Calling</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">B2B Sales Training</span>
+                </a>
+                <a href="#" class="p-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-3 group/item">
+                  <div class="w-2 h-2 rounded-full bg-brand group-hover/item:scale-150 transition-transform"></div>
+                  <span class="text-xs font-semibold text-gray-800 group-hover/item:text-black">Inbound Lead Qualification</span>
+                </a>
+              </div>
+
+              <!-- Right Column: Tools & Resources -->
+              <div class="col-span-4 flex flex-col justify-center space-y-3 pl-2">
+                <a href="#" class="p-3 rounded-xl hover:bg-gray-100 transition-all group/sub flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-bold text-gray-900 group-hover/sub:text-brand-dark">ROI calculator</p>
+                    <p class="text-[11px] text-gray-500">Calculate outreach returns</p>
+                  </div>
+                  <i data-lucide="calculator" class="w-4 h-4 text-gray-400 group-hover/sub:text-brand-dark"></i>
+                </a>
+                <a href="#" class="p-3 rounded-xl hover:bg-gray-100 transition-all group/sub flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-bold text-gray-900 group-hover/sub:text-brand-dark">How it works</p>
+                    <p class="text-[11px] text-gray-500">Our B2B engine process</p>
+                  </div>
+                  <i data-lucide="play-circle" class="w-4 h-4 text-gray-400 group-hover/sub:text-brand-dark"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="text-gray-300 hover:text-white transition-colors">Case Studies</a>
+        <a href="#" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+        <a href="#" class="text-gray-300 hover:text-white transition-colors">Resources</a>
+        <a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a>
+        <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a>
+      </nav>
+
+      <!-- CTA Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden sm:inline-flex px-5 py-2.5 rounded-full border border-gray-700 hover:border-brand text-xs font-semibold text-gray-300 hover:text-white transition-all">
+          Brand Evaluation
+        </a>
+        <a href="#" class="px-5 py-2.5 rounded-full bg-brand hover:bg-brand-dark text-black font-bold text-xs shadow-[0_0_20px_rgba(91,226,34,0.3)] hover:shadow-[0_0_30px_rgba(91,226,34,0.5)] transition-all">
+          Request Pricing
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    
+    <!-- Left Hero Content -->
+    <div class="lg:col-span-6 space-y-8">
+      
+      <!-- Top Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card border border-brand/30">
+        <i data-lucide="sparkles" class="w-4 h-4 text-brand"></i>
+        <span class="text-xs font-semibold text-gray-300 uppercase tracking-wider">
+          AI-POWERED OUTBOUND ENGINE FOR <span class="text-brand font-bold">B2B COMPANIES</span>
+        </span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
+        Smarter Outbound.<br />
+        Stronger Growth.<br />
+        <span class="text-brand text-glow relative inline-block">
+          Real Results.
+          <svg class="absolute left-0 -bottom-2 w-full h-3 text-brand" viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path d="M0 15 Q 50 0, 100 15" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
+        <strong class="text-white">Gull Of Group</strong> combines human intelligence with proprietary AI to deliver high-quality leads, booked meetings, and pipeline growth for ambitious B2B companies.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a href="#" class="px-7 py-4 rounded-xl bg-brand hover:bg-brand-dark text-black font-bold text-sm shadow-[0_0_25px_rgba(91,226,34,0.4)] hover:shadow-[0_0_35px_rgba(91,226,34,0.6)] transition-all flex items-center gap-2 group">
+          Book a Consultation
+          <i data-lucide="calendar" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="#" class="px-7 py-4 rounded-xl glass-card hover:border-gray-500 text-white font-semibold text-sm transition-all flex items-center gap-2">
+          See How It Works
+          <i data-lucide="play-circle" class="w-4 h-4 text-brand"></i>
+        </a>
+      </div>
+
+      <!-- Trust Badge -->
+      <div class="flex items-center gap-4 pt-4 border-t border-gray-800/60">
+        <div class="flex -space-x-3">
+          <img class="w-9 h-9 rounded-full border-2 border-black object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="User" />
+          <img class="w-9 h-9 rounded-full border-2 border-black object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="User" />
+          <img class="w-9 h-9 rounded-full border-2 border-black object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="User" />
+          <div class="w-9 h-9 rounded-full border-2 border-black bg-gray-900 text-brand text-xs font-bold flex items-center justify-center">200+</div>
+        </div>
+        <p class="text-xs text-gray-400 font-medium">Trusted by <strong class="text-gray-200">200+ B2B companies</strong> worldwide</p>
+      </div>
+
+    </div>
+
+    <!-- Right Graphic: Animated Central Orb & Orbiting Nodes -->
+    <div class="lg:col-span-6 relative flex items-center justify-center">
+      
+      <div class="relative w-80 h-80 sm:w-[420px] sm:h-[420px] flex items-center justify-center">
+        
+        <!-- Rotating Outer Orbit Ring -->
+        <div class="absolute inset-0 rounded-full border border-dashed border-gray-800 animate-spin-slow"></div>
+        <div class="absolute inset-8 rounded-full border border-gray-800/80 glow-effect"></div>
+
+       <!-- Center Glowing Emblem (FIXED: circle clip + screen blend so the logo's black square background disappears) -->
+<div class="logo-emblem w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-black border-2 border-brand flex items-center justify-center shadow-[0_0_50px_rgba(91,226,34,0.4)] z-10 animate-float">
+  <!-- Dynamic Logo Image -->
+  <img src="https://abdullah-gull.github.io/services/facon-Gull-of-Group.png" alt="Gull Of Group Logo" class="w-[80%] h-[80%] object-contain filter drop-shadow-[0_0_10px_rgba(91,226,34,0.6)]" />
+</div>
+
+        <!-- Floating Node 1: Top Right -->
+        <div class="absolute top-2 right-4 glass-card p-3 rounded-2xl flex items-center gap-3 border border-gray-700 shadow-lg animate-float" style="animation-delay: 0s;">
+          <div class="p-2.5 rounded-xl bg-brand/10 border border-brand/30 text-brand">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">Human</p>
+            <p class="text-[10px] text-gray-400">Intelligence</p>
+          </div>
+        </div>
+
+        <!-- Floating Node 2: Top Left -->
+        <div class="absolute top-10 left-0 glass-card p-3 rounded-2xl flex items-center gap-3 border border-gray-700 shadow-lg animate-float" style="animation-delay: 1s;">
+          <div class="p-2.5 rounded-xl bg-brand/10 border border-brand/30 text-brand">
+            <i data-lucide="target" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">Targeted</p>
+            <p class="text-[10px] text-gray-400">Outreach</p>
+          </div>
+        </div>
+
+        <!-- Floating Node 3: Bottom Right -->
+        <div class="absolute bottom-10 right-0 glass-card p-3 rounded-2xl flex items-center gap-3 border border-gray-700 shadow-lg animate-float" style="animation-delay: 2s;">
+          <div class="p-2.5 rounded-xl bg-brand/10 border border-brand/30 text-brand">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">Pipeline</p>
+            <p class="text-[10px] text-gray-400">Growth</p>
+          </div>
+        </div>
+
+        <!-- Floating Node 4: Bottom Left -->
+        <div class="absolute bottom-2 left-4 glass-card p-3 rounded-2xl flex items-center gap-3 border border-gray-700 shadow-lg animate-float" style="animation-delay: 1.5s;">
+          <div class="p-2.5 rounded-xl bg-brand/10 border border-brand/30 text-brand">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">Proprietary AI</p>
+            <p class="text-[10px] text-gray-400">Technology</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- STATS BAR -->
+  <section class="max-w-7xl mx-auto px-6 my-8">
+    <div class="glass-card rounded-3xl p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y lg:divide-y-0 lg:divide-x divide-gray-800">
+      
+      <div class="flex items-center gap-4 pt-4 lg:pt-0">
+        <div class="p-3 rounded-2xl bg-brand/10 text-brand border border-brand/20">
+          <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-black text-white">200+</h3>
+          <p class="text-xs text-gray-400 font-medium">Onshore Sales Executives</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 pt-4 lg:pt-0 lg:pl-6">
+        <div class="p-3 rounded-2xl bg-brand/10 text-brand border border-brand/20">
+          <i data-lucide="award" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-black text-white">15+</h3>
+          <p class="text-xs text-gray-400 font-medium">Years in Business</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 pt-4 lg:pt-0 lg:pl-6">
+        <div class="p-3 rounded-2xl bg-brand/10 text-brand border border-brand/20">
+          <i data-lucide="cpu" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold text-brand uppercase tracking-wider">Proprietary AI</h3>
+          <p class="text-xs text-gray-400 font-medium">Outreach System</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 pt-4 lg:pt-0 lg:pl-6">
+        <div class="p-3 rounded-2xl bg-brand/10 text-brand border border-brand/20">
+          <i data-lucide="zap" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold text-brand uppercase tracking-wider">Powered</h3>
+          <p class="text-xs text-gray-400 font-medium">By Human Intelligence</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOGO BANNER SECTION -->
+  <section class="max-w-7xl mx-auto px-6 py-10 border-t border-gray-800/60">
+    <p class="text-center text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em] mb-8">
+      Trusted By Growing Companies
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-50 hover:opacity-100 transition-opacity">
+      <span class="text-xl font-bold tracking-tight text-white">HubSpot</span>
+      <span class="text-xl font-semibold tracking-tight text-white">pipedrive</span>
+      <span class="text-xl font-bold tracking-tight text-white">monday<span class="text-xs text-brand">.com</span></span>
+      <span class="text-xl font-bold tracking-tight text-white">Dropbox</span>
+      <span class="text-xl font-bold tracking-tight text-white">_zapier</span>
+      <span class="text-xl font-semibold tracking-tight text-white">aircall</span>
+    </div>
+  </section>
+
+  <!-- INTEGRATED NEON FOOTER -->
+  <footer class="w-full bg-[#070A0D] border-t border-gray-800/80 text-gray-400 relative overflow-hidden pt-16 pb-8">
+    <!-- Neon Background Glow matching template theme -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-brand/5 blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800/80">
+        
+        <!-- Brand & Info Section -->
+        <div class="lg:col-span-1 space-y-6">
+              <a href="https://gull-of-group.github.io/index.html" class="inline-flex items-center shrink-0 group py-1">
+      <img src="https://abdullah-gull.github.io/services/ChatGPT_Image_Jul_26__2026__01_23_06_AM-removebg-preview.png" alt="Gull Of Group"
+           class="h-9 sm:h-11 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(139,63,224,0.35)] group-hover:drop-shadow-[0_0_18px_rgba(219,165,78,0.5)] group-hover:scale-[1.03] transition-all duration-300 ease-out">
+    </a>
+
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Building core scalable AI solutions, deep learning models, and production-grade architectures for modern global enterprises.
+          </p>
+
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand block mb-1">Headquarters</span>
+            <p class="text-xs text-gray-300 font-medium">280 W 198th St<br>New York, NY 10030</p>
+          </div>
+
+          <!-- Social Links (inline SVG — no external icon library dependency, always renders) -->
+          <div class="flex items-center gap-2 pt-1">
+            <a href="#" aria-label="LinkedIn" class="w-8 h-8 rounded-lg bg-cardbg border border-gray-800 hover:border-brand/50 hover:bg-brand/10 flex items-center justify-center text-gray-300 hover:text-brand transition-all">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.558V9h3.556v11.452z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-lg bg-cardbg border border-gray-800 hover:border-brand/50 hover:bg-brand/10 flex items-center justify-center text-gray-300 hover:text-brand transition-all">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="X (Twitter)" class="w-8 h-8 rounded-lg bg-cardbg border border-gray-800 hover:border-brand/50 hover:bg-brand/10 flex items-center justify-center text-gray-300 hover:text-brand transition-all">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 1: ABOUT -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2 mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand shadow-[0_0_8px_#5BE222]"></span> ABOUT
+          </h4>
+          <ul class="space-y-2.5 text-xs font-medium">
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Our customers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">How it works</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">B2B Appointment setting</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Sales Outsourcing Service</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Service tiers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Sales team profile</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">What to expect</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Monthly leads funnel</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">References</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: COMPANY -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2 mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand shadow-[0_0_8px_#5BE222]"></span> COMPANY
+          </h4>
+          <ul class="space-y-2.5 text-xs font-medium">
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Company one pager</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Use cases whitepaper</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Reviews and awards</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Powered by G2</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Our blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Onboarding Timeline</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">ROI calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: INDUSTRIES -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2 mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand shadow-[0_0_8px_#5BE222]"></span> INDUSTRIES
+          </h4>
+          <ul class="space-y-2.5 text-xs font-medium">
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Technology</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Education and training</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Healthcare and Medical</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Software Development</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Fintech & Financial Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">AI and Machine Learning</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Cybersecurity</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand hover:translate-x-1 inline-block transition-all">Ecommerce and retail</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Compliance Bar (full-width, outside the columns grid) -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand font-semibold text-[11px] shadow-[0_0_12px_rgba(91,226,34,0.15)]">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            SOC 2 Compliant
+          </span>
+          <a href="#" class="hover:text-brand transition-colors">See how we handle your data</a>
+        </div>
+
+        <div class="text-center sm:text-right">
+          © 2026 <span class="text-gray-200 font-bold">Gull Of Group LLC</span>. All Rights Reserved. |
+          <a href="#" class="hover:text-brand transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT FOR INTERACTION -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Lucide Icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // ===== DESKTOP MEGA MENU LOGIC =====
+      const navTriggers = document.querySelectorAll('.nav-trigger');
+      const navItems = document.querySelectorAll('.nav-item');
+      const megaContainer = document.getElementById('megaContainer');
+      const megaScrim = document.getElementById('megaScrim');
+      const megaPanels = document.querySelectorAll('.mega-content');
+
+      let activePanelId = null;
+
+      function closeMegaMenu() {
+        if (megaContainer) megaContainer.classList.remove('open');
+        if (megaScrim) megaScrim.classList.remove('show');
+        navItems.forEach(item => item.classList.remove('open'));
+        
+        megaPanels.forEach(panel => {
+          panel.style.display = 'none';
+        });
+        activePanelId = null;
+      }
+
+      function openMegaMenu(panelId, triggerBtn) {
+        const targetPanel = document.getElementById(`panel-${panelId}`);
+        if (!targetPanel) return;
+
+        megaPanels.forEach(panel => {
+          panel.style.display = 'none';
+        });
+        navItems.forEach(item => item.classList.remove('open'));
+
+        targetPanel.style.display = 'grid';
+        triggerBtn.closest('.nav-item').classList.add('open');
+        
+        if (megaContainer) megaContainer.classList.add('open');
+        if (megaScrim) megaScrim.classList.add('show');
+        activePanelId = panelId;
+      }
+
+      navTriggers.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const panelId = btn.getAttribute('data-panel');
+          
+          if (activePanelId === panelId) {
+            closeMegaMenu();
+          } else {
+            openMegaMenu(panelId, btn);
+          }
+        });
+      });
+
+      if (megaScrim) {
+        megaScrim.addEventListener('click', closeMegaMenu);
+      }
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('header')) {
+          closeMegaMenu();
+        }
+      });
+
+      // ===== MOBILE DRAWER LOGIC =====
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const closeMobileBtn = document.getElementById('closeMobileBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileOverlay = document.getElementById('mobileOverlay');
+
+      function openMobileMenu() {
+        if (mobileMenu) mobileMenu.classList.remove('translate-x-full');
+        if (mobileOverlay) mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileDrawer() {
+        if (mobileMenu) mobileMenu.classList.add('translate-x-full');
+        if (mobileOverlay) mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+      }
+
+      if (hamburgerBtn) hamburgerBtn.addEventListener('click', openMobileMenu);
+      if (closeMobileBtn) closeMobileBtn.addEventListener('click', closeMobileDrawer);
+      if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileDrawer);
+
+      // ===== MOBILE ACCORDION TOGGLE =====
+      const mobileAccBtns = document.querySelectorAll('.mobile-acc-btn');
+
+      mobileAccBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isOpen = btn.classList.contains('open');
+
+          mobileAccBtns.forEach(otherBtn => {
+            if (otherBtn !== btn) {
+              otherBtn.classList.remove('open');
+            }
+          });
+
+          if (isOpen) {
+            btn.classList.remove('open');
+          } else {
+            btn.classList.add('open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
